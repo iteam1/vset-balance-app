@@ -10,7 +10,7 @@ local app server  communicate with printer and balance
 
 ### System-diagram
 
-![sys](/docs/SYS.svg)
+![sys](/docs/SYS.png)
 
 ### Tools
 [diagrameditor](https://www.diagrameditor.com/)
