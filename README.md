@@ -20,6 +20,13 @@ OS: Windows 7
 
 	pip install win32printing
 
+**Commands**
+
+List all printer:
+
+	for p in win32print.EnumPrinter(2):
+		print(p)
+
 ### Tools
 [diagrameditor](https://www.diagrameditor.com/)
 
