@@ -36,19 +36,15 @@ List all printer:
 ### References
 
 [markdown-badges](https://github.com/Ileriayo/markdown-badges)
-
+[Python使用win32print模块设置打印机](https://www.cnblogs.com/lixiufeng1994/articles/13027576.html)
 [barcode](https://barcode.tec-it.com/en)
-
 [rawprinttest](https://gist.github.com/Dogers/d60a1b25f9b11bdfc7c54c2cf020466c)
-
 [thong-tu-22](https://www.phanmemvang.com.vn/tin-tuc/tu-van/infographic-tem-nhan-nu-trang-voi-thong-tu-22.html)
-
 [labelary](http://labelary.com/)
-
 [win32print](http://timgolden.me.uk/pywin32-docs/win32print.html)
-
 [print](http://timgolden.me.uk/python/win32_how_do_i/print.html)
-
 [When using win32print + cx_Freeze](https://stackoverflow.com/questions/54239295/when-using-win32print-cx-freeze-print-instruction-doesnt-work-without-produc)
-
 [ZPL | ZEBRA Programming Language Tutorial | LABELS PRINTING](https://www.youtube.com/watch?v=DBCV2V4LPZ0)
+[print-pdf-file-in-duplex-mode-via-python](https://dig.codes/example/print-pdf-file-in-duplex-mode-via-python)
+[How to print hard copy of C, C++ program's output | C++ program for printer device](https://www.youtube.com/watch?v=GDxLs0CEdAY)
+[printing-on-paper-with-python-n79](https://dev.to/pa4kev/printing-on-paper-with-python-n79)
