@@ -19,6 +19,7 @@ OS: Windows 7
 **Install manually**
 
 	pip install win32printing
+	p
 
 **Commands**
 
@@ -49,3 +50,5 @@ List all printer:
 [print](http://timgolden.me.uk/python/win32_how_do_i/print.html)
 
 [When using win32print + cx_Freeze](https://stackoverflow.com/questions/54239295/when-using-win32print-cx-freeze-print-instruction-doesnt-work-without-produc)
+
+[ZPL | ZEBRA Programming Language Tutorial | LABELS PRINTING](https://www.youtube.com/watch?v=DBCV2V4LPZ0)
