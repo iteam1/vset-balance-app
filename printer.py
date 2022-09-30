@@ -14,7 +14,7 @@ else:
 
 hPrinter = win32print.OpenPrinter(printer_name)
 try:
-  hJob = win32print.StartDocPrinter(hPrinter, 1,'''A50,50,0,2,1,1,N,"9129302\"''', None, "RAW")
+  hJob = win32print.StartDocPrinter (hPrinter, 1, ("test of raw data", None, "RAW"))
   try:
     win32print.StartPagePrinter(hPrinter)
     win32print.WritePrinter(hPrinter, raw_data)
