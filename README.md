@@ -40,7 +40,7 @@ List all printer:
 
 [rawprinttest](https://gist.github.com/Dogers/d60a1b25f9b11bdfc7c54c2cf020466c)
 
-[thong-tu-22)](https://www.phanmemvang.com.vn/tin-tuc/tu-van/infographic-tem-nhan-nu-trang-voi-thong-tu-22.html)
+[thong-tu-22](https://www.phanmemvang.com.vn/tin-tuc/tu-van/infographic-tem-nhan-nu-trang-voi-thong-tu-22.html)
 
 [labelary](http://labelary.com/)
 
