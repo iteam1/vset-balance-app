@@ -47,3 +47,5 @@ List all printer:
 [win32print](http://timgolden.me.uk/pywin32-docs/win32print.html)
 
 [print](http://timgolden.me.uk/python/win32_how_do_i/print.html)
+
+[When using win32print + cx_Freeze](https://stackoverflow.com/questions/54239295/when-using-win32print-cx-freeze-print-instruction-doesnt-work-without-produc)
