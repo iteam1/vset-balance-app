@@ -43,3 +43,5 @@ List all printer:
 [labelary](http://labelary.com/)
 
 [win32print](http://timgolden.me.uk/pywin32-docs/win32print.html)
+
+[print](http://timgolden.me.uk/python/win32_how_do_i/print.html)

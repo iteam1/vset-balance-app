@@ -1,33 +1,25 @@
+import os, sys
 import win32print
-import sys
-from pathlib import Path
 
-# Python 3 only..
-if sys.version_info[0] < 3:
-    raise Exception("Python 3 or a more recent version is required.")
+printer_name = win32print.GetDefaultPrinter()
+#
+# raw_data could equally be raw PCL/PS read from
+#  some print-to-file operation
+#
 
-printers = win32print.EnumPrinters(4)
-printercount = 0
-for x in printers:
-    print(printercount, "-", x[2])
-    printercount += 1
+if sys.version_info >= (3,):
+  raw_data = bytes ("This is a test", "utf-8")
+else:
+  raw_data = "This is a test"
 
-chosenprinter = int(input("Printer number? "))
-
-chosenfile = Path()
-while not chosenfile.is_file():
-    filename = input("Enter PDF file path: ")
-    chosenfile = Path(filename)
-
-myprinter = win32print.OpenPrinter(printers[chosenprinter][2])
-
-printjob = win32print.StartDocPrinter(
-    myprinter, 1, ("Python test RAW print", None, "raw"))
-
-with open(chosenfile, mode='rb') as file:
-    buf = file.read()
-
-bytesprinted = win32print.WritePrinter(myprinter, buf)
-
-win32print.EndDocPrinter(myprinter)
-win32print.ClosePrinter(myprinter)
+hPrinter = win32print.OpenPrinter (printer_name)
+try:
+  hJob = win32print.StartDocPrinter (hPrinter, 1, ("test of raw data", None, "RAW"))
+  try:
+    win32print.StartPagePrinter (hPrinter)
+    win32print.WritePrinter (hPrinter, raw_data)
+    win32print.EndPagePrinter (hPrinter)
+  finally:
+    win32print.EndDocPrinter (hPrinter)
+finally:
+  win32print.ClosePrinter (hPrinter)
