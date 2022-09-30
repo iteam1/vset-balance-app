@@ -12,7 +12,13 @@ local app server  communicate with printer and balance
 
 ![sys](/docs/SYS.png)
 
+OS: Windows 7
+
 ### Guides
+
+**Install manually**
+
+	pip install win32printing
 
 ### Tools
 [diagrameditor](https://www.diagrameditor.com/)
@@ -20,3 +26,13 @@ local app server  communicate with printer and balance
 ### References
 
 [markdown-badges](https://github.com/Ileriayo/markdown-badges)
+
+[barcode](https://barcode.tec-it.com/en)
+
+[rawprinttest](https://gist.github.com/Dogers/d60a1b25f9b11bdfc7c54c2cf020466c)
+
+[ZPL(Zebra printing language)](https://www.phanmemvang.com.vn/tin-tuc/tu-van/infographic-tem-nhan-nu-trang-voi-thong-tu-22.html)
+
+[labelary](http://labelary.com/)
+
+[win32print](http://timgolden.me.uk/pywin32-docs/win32print.html)
