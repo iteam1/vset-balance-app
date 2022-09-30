@@ -30,6 +30,8 @@ List all printer:
 ### Tools
 [diagrameditor](https://www.diagrameditor.com/)
 
+[bartender-10](http://azprint.vn/tin-tong-hop/huong-dan-crack-cai-dat-bartender-10-va-ket-noi-file-excel-de-in-ma-vach.html)
+
 ### References
 
 [markdown-badges](https://github.com/Ileriayo/markdown-badges)
