@@ -19,7 +19,6 @@ shipment_count: 34
 HUB: DEL
 ^FS
 
-
 ^XZ
 """
 
