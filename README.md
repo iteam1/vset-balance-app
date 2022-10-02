@@ -42,7 +42,7 @@ List all printer:
 
 [win32](http://timgolden.me.uk/pywin32-docs/win32.html) *Relly important*
 
-[print](http://timgolden.me.uk/python/win32_how_do_i/print.html)
+[example win32print](http://timgolden.me.uk/python/win32_how_do_i/print.html)
 
 [thong-tu-22](https://www.phanmemvang.com.vn/tin-tuc/tu-van/infographic-tem-nhan-nu-trang-voi-thong-tu-22.html)
 
