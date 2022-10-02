@@ -23,6 +23,6 @@ HUB: DEL
 ^XZ
 """
 
-from zebra import zebra
-z = zebra('zebra_test')
+from zebra import Zebra
+z = Zebra('zebra_test')
 z.output(label)
