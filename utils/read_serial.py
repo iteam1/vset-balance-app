@@ -10,6 +10,7 @@ print(f"Serial COM= {my_serial.name}") # check com port
 if __name__ == "__main__":
     while True:
         comming_data = my_serial.read(14) # read():read on byte, read(14): read up to 14 bytes, readline() readline
-        print(comming_data.decode())
+        my_string = comming_data.decode()
+        print(my_string.strip()) 
 
 #ser.write(b'hello')     # write a string decode to bytes .decode()
