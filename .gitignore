@@ -6,3 +6,7 @@ __pycache__
 
 # visual studio code
 .vscode
+
+# snippet code
+utils/Print 10
+utils/src
