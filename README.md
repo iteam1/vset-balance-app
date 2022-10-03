@@ -12,10 +12,11 @@ local app server  communicate with printer and balance
 
 ![sys](/docs/SYS.png)
 
-OS: Windows 7
+OS: Windows 7,10
 
 ### Guides
 
+run local-app `python run.py`
 view api-docs `http://127.0.0.1:5000/apidocs/`
 
 **Install manually**
