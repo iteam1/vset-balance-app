@@ -1,0 +1,15 @@
+import serial
+
+# input com port
+my_com = input("Enter your serial-com (Default COM3): ") 
+if my_com == "": my_com = "COM3"
+
+my_serial = serial.Serial(my_com)
+print(f"Serial COM= {my_serial.name}") # check com port
+
+if __name__ == "__main__":
+    while True:
+        comming_data = my_serial.read(14) # read():read on byte, read(14): read up to 14 bytes, readline() readline
+        print(comming_data.decode())
+
+#ser.write(b'hello')     # write a string decode to bytes .decode()
