@@ -7,3 +7,4 @@
 |[script5.py](/snippet/script5.py)|try to send `RAW` content to `win32ui`|something worked|
 |[script6.py](/snippet/script6.py)|try to send `RAW` content to `win32print`|---|
 |[script7.py](/snippet/script7.py)|try to draw some text into printer by `win32ui`|it work! thanks :)|
+|[script8.py](/snippet/script8.py)|try to send `RAW` content to `win32print`||
