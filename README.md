@@ -16,6 +16,8 @@ OS: Windows 7
 
 ### Guides
 
+view api-docs `http://127.0.0.1:5000/apidocs/`
+
 **Install manually**
 
 	pip install win32printing

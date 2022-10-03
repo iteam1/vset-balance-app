@@ -1,0 +1,9 @@
+About Page
+This specification is taken from a external YAML file
+---
+parameters:
+  - name: Home
+    in: path
+responses:
+  200:
+    description: Return home hmtl
