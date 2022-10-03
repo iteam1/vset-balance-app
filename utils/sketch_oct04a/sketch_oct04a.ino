@@ -8,6 +8,8 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  Serial.println(" -123.4568T "); // Total 14 bytes
+  Serial.println("123.45678Tl4"); // Total 14 bytes
+  delay(3000);
+  Serial.println("  0.18288Tl4"); // Total 14 bytes
   delay(3000);
 }
