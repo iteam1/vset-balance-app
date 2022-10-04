@@ -32,6 +32,9 @@ OS: Windows 7,10
 
 **Content**
 
+Font:`Segoe UI` Bold Fontsize: 13 Bold 
+
+Text
 NPP: DNTN KDV KIM SƠN
 59 Nghĩa Thục,P.5,Q.5,TP.HCM
 NCC: DNTN HÒA HIẾU
