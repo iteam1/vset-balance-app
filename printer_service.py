@@ -2,16 +2,24 @@ import win32print
 import win32ui
 import time
 import json
-from PIL import Image,ImageWin
+from PIL import Image,ImageWin,ImageDraw,ImageFont
 
 class printer():
     def __init__(self):
+        self.IMAGE_WIDTH = 670 # pixel
+        self.IMAGE_HEIGHT = 160 # pixel
         self.OFFSET_X_PIXEL = 0 # offset x position
         self.OFFSET_Y_PIXEL = 0 # offset y position
         self.SCALE_SIZE = 0.5 # scale factor
+        self.barcode_path = "./barcode"
         self.printer_name = win32print.GetDefaultPrinter() # get printer default
         self.hDC= win32ui.CreateDC()
         self.hDC.CreatePrinterDC(self.printer_name)
+        
+    def generate_img(self,img_name):
+        img = Image.new('RGB',(self.IMAGE_WIDTH,self.IMAGE_HEIGHT),color = 'white')
+        print()
+        img.save(f"{self.barcode_path}/{img_name}.png")
     
     def print_barcode(self,file):
         bmp = Image.open(file) # open image convert to bitmap
@@ -38,6 +46,7 @@ class printer():
 
 # Init
 file_path = "./docs/task_printer.json"
+fnt = ImageFont.truetype('./segoe-ui/SEGOEUI.TTF', 13) # create font
 thermal_printer = printer()
 
 # Loop
@@ -46,9 +55,13 @@ thermal_printer = printer()
 f = open(file_path) # read text
 tasks_printer = json.load(f) # convert text to json
 #print(tasks_printer)
+barcode_list = list(tasks_printer.keys())
+#print(barcode_list)
 
 #Generate image
-
+thermal_printer.generate_img(barcode_list[0])
 #Print
+
+# Clear all barcode
 
 #Delay
