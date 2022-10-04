@@ -10,3 +10,5 @@
 |[script8.py](/snippet/script8.py)|try to send `RAW` content to `win32print`||
 |[script9.py](/snippet/script9.py)|try to print content in a file txt by `win32ui`|WORKED!|
 |[script10.py](/snippet/script10.py)|try to print img by `win32ui`|WORKED!|
+|[script11.py](/snippet/script11.py)|try to print img by `win32ui`|WORKED!|
+|[script12.py](/snippet/script12.py)|try to print img by `win32ui`|WORKED!|
