@@ -1,4 +1,3 @@
-import win32api
 import win32print
 import win32ui
 import win32con

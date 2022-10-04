@@ -42,15 +42,19 @@ List all printer:
 
 ### References
 
+[win32](http://timgolden.me.uk/pywin32-docs/win32.html) *Really important*
+
+[win32ui](http://timgolden.me.uk/pywin32-docs/win32ui.html) *Really important*
+
+[pywin32](https://github.com/mhammond/pywin32) *Really important*
+
+[example win32print](http://timgolden.me.uk/python/win32_how_do_i/print.html) *Really important*
+
 [markdown-badges](https://github.com/Ileriayo/markdown-badges)
 
 [Python使用win32print模块设置打印机](https://www.cnblogs.com/lixiufeng1994/articles/13027576.html)
 
 [labelary](http://labelary.com/)
-
-[win32](http://timgolden.me.uk/pywin32-docs/win32.html) *Really important*
-
-[example win32print](http://timgolden.me.uk/python/win32_how_do_i/print.html)
 
 [thong-tu-22](https://www.phanmemvang.com.vn/tin-tuc/tu-van/infographic-tem-nhan-nu-trang-voi-thong-tu-22.html)
 
@@ -65,3 +69,5 @@ List all printer:
 [return-plain-text-from-flask](https://stackoverflow.com/questions/57296472/how-to-return-plain-text-from-flask-endpoint-needed-by-prometheus)
 
 [sqlite3-programmingerror-incorrect-number-of-bindings](https://stackoverflow.com/questions/16856647/sqlite3-programmingerror-incorrect-number-of-bindings-supplied-the-current-sta)
+
+[win32ui insert an image to CreateDC()](https://stackoverflow.com/questions/73175487/win32ui-insert-an-image-to-createdc)
