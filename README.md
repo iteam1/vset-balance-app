@@ -91,6 +91,10 @@ DELETE
 	  -H "X-Parse-Application-Id: SCWASRTWK1Y9AVMP1KFC" \
 	https://vset.vvs.vn/parse/classes/PrintJob/D9UrWx2m0H
 
+**barcode json format**
+
+### Autostart with Computer
+
 ### Tools
 [diagrameditor](https://www.diagrameditor.com/)
 
