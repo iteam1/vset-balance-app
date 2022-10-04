@@ -27,13 +27,22 @@ OS: Windows 7,10
 **Install manually**
 
 	pip install win32printing
+	pip install zpl
+	pip install zebra
 
-**Commands**
+**Content**
 
-List all printer:
+NPP: DNTN KDV KIM SƠN
+59 Nghĩa Thục,P.5,Q.5,TP.HCM
+NCC: DNTN HÒA HIẾU
+582 Bà Hạt,P.6,Q.10,TP.HCM
+NHẪN KIỂU RỒNG
+KLT: 1.47 chỉ KLV: 0.47 chỉ KLH: 1.0 chỉ KLĐ: 0.0 chỉ
+Kí hiệu: GP
+Hàm lượng: 18k
+Barcode 128
 
-	for p in win32print.EnumPrinter(2):
-		print(p)
+![example](./docs/template3.PNG)
 
 ### Tools
 [diagrameditor](https://www.diagrameditor.com/)
