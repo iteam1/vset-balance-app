@@ -61,3 +61,7 @@ List all printer:
 [printing-on-paper-with-python-n79](https://dev.to/pa4kev/printing-on-paper-with-python-n79)
 
 [sqlite-browser](https://sqlitebrowser.org/dl/)
+
+[return-plain-text-from-flask](https://stackoverflow.com/questions/57296472/how-to-return-plain-text-from-flask-endpoint-needed-by-prometheus)
+
+[sqlite3-programmingerror-incorrect-number-of-bindings](https://stackoverflow.com/questions/16856647/sqlite3-programmingerror-incorrect-number-of-bindings-supplied-the-current-sta)
