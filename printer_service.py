@@ -13,6 +13,7 @@ class printer():
         self.SCALE_SIZE = 0.5 # scale factor
         self.barcode_path = "./barcode"
         self.printer_name = win32print.GetDefaultPrinter() # get printer default
+        self.fnt = ImageFont.truetype('./segoe-ui/SEGOEUI.TTF', 13) # create font
         self.hDC= win32ui.CreateDC()
         self.hDC.CreatePrinterDC(self.printer_name)
         
@@ -46,7 +47,6 @@ class printer():
 
 # Init
 file_path = "./docs/task_printer.json"
-fnt = ImageFont.truetype('./segoe-ui/SEGOEUI.TTF', 13) # create font
 thermal_printer = printer()
 
 # Loop
