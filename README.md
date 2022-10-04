@@ -93,6 +93,10 @@ DELETE
 
 **barcode json format**
 
+	{page1: “dong1 \r\ndong2  \r\ndong3  \r\ndong4”, 
+	page2: {text: “dong 1  \r\n dong 2”,
+			barcode: 12345678}
+
 ### Autostart with Computer
 
 ### Tools
