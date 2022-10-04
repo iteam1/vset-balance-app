@@ -16,11 +16,11 @@ OS: Windows 7,10
 
 ### Guides
 
-run all things `run.bat`
+- run all things `run.bat` (also work with virtual environment)
 
-run local-app (independently) `python run.py`
+- run local-app (independently) `python run.py`
 
-view api-docs `http://127.0.0.1:5000/apidocs/`
+- view api-docs `http://127.0.0.1:5000/apidocs/`
 
 **Install manually**
 
