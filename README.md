@@ -49,6 +49,30 @@ Text
 
 ![example](./docs/real.jpg)
 
+### APIs
+
+**balance APIs**
+
+https://vset.vvs.vn/parse/classes/GoldWeight/IXvPHGKTen
+
+method: PUT
+
+body: {"value": 5.1}
+
+request header:
+
+X-Parse-Application-Id
+
+SCWASRTWK1Y9AVMP1KFC
+
+Example
+
+	curl -X PUT \
+	-H "X-Parse-Application-Id: SCWASRTWK1Y9AVMP1KFC" \
+	-H "Content-Type: application/json" \
+	-d '{"value":5.2}' \
+	https://vset.vvs.vn/parse/classes/GoldWeight/IXvPHGKTen
+
 ### Tools
 [diagrameditor](https://www.diagrameditor.com/)
 
