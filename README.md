@@ -50,8 +50,8 @@ Text
 - Barcode 128
 
 ![example](./docs/template2.png)
-
-![example](./docs/real.jpg)
+<!-- 
+![example](./docs/real.jpg) -->
 
 ### APIs
 
