@@ -33,6 +33,7 @@ OS: Windows 7,10
 	pip install win32printing
 	pip install zpl
 	pip install zebra
+	pip install barcode
 
 **Content**
 
