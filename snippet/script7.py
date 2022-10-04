@@ -3,7 +3,6 @@ import win32ui
 import win32con
 import win32gui
 
-
 file = "docs/sample.pdf"
 content  =  "Hello world!"#"Chương Hòa Lộc"
 
