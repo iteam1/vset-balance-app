@@ -135,3 +135,7 @@ DELETE
 [sqlite3-programmingerror-incorrect-number-of-bindings](https://stackoverflow.com/questions/16856647/sqlite3-programmingerror-incorrect-number-of-bindings-supplied-the-current-sta)
 
 [win32ui insert an image to CreateDC()](https://stackoverflow.com/questions/73175487/win32ui-insert-an-image-to-createdc)
+
+[Run a batch file at loading of Windows 8 and 10](https://www.computerhope.com/issues/ch000322.htm)
+
+[Start your mining .BAT file with Windows Startup Automatically](https://www.youtube.com/watch?v=Kz2rUbjTd68)
