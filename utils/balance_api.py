@@ -7,6 +7,7 @@ data = {"value":5.2}
 
 headers = {
     'X-Parse-Application-Id':'SCWASRTWK1Y9AVMP1KFC',
+    'Content-Type':'application/json'
 }
 
 with requests.Session() as s:
