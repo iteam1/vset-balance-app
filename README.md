@@ -20,6 +20,10 @@ OS: Windows 7,10
 
 - run all things `run.bat` (also work with virtual environment)
 
+- run balance `python balance_service.py`
+
+- run printer `python printer_service.py`
+
 - run local-app (independently) `python run.py`
 
 - view api-docs `http://127.0.0.1:5000/apidocs/`
