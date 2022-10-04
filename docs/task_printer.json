@@ -1,7 +1,17 @@
 {
-    'page1': 'dong1 \r\ndong2  \r\ndong3  \r\ndong4',
-    'page2':{'text': 'dong 1  \r\n dong 2',
-			'barcode': 12345678
+    "task_1":{
+        "page1": "dong1 \r\ndong2 \r\ndong3 \r\ndong4",
+        "page2":{
+        "text":"dong1 \r\ndong2",
+        "barcode": 12345678
+        }
+    },
+
+    "task_2":{
+        "page1": "dong1 \r\ndong2 \r\ndong3 \r\ndong4",
+        "page2":{
+        "text":"dong1 \r\ndong2",
+        "barcode": 12345678
         }
     }
-
+}
