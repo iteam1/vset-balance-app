@@ -35,17 +35,17 @@ OS: Windows 7,10
 Font:`Segoe UI` Bold Fontsize: 13 Bold 
 
 Text
-NPP: DNTN KDV KIM SƠN
-59 Nghĩa Thục,P.5,Q.5,TP.HCM
-NCC: DNTN HÒA HIẾU
-582 Bà Hạt,P.6,Q.10,TP.HCM
-NHẪN KIỂU RỒNG
-KLT: 1.47 chỉ KLV: 0.47 chỉ KLH: 1.0 chỉ KLĐ: 0.0 chỉ
-Kí hiệu: GP
-Hàm lượng: 18k
-Barcode 128
+- NPP: DNTN KDV KIM SƠN
+- 59 Nghĩa Thục,P.5,Q.5,TP.HCM
+- NCC: DNTN HÒA HIẾU
+- 582 Bà Hạt,P.6,Q.10,TP.HCM
+- NHẪN KIỂU RỒNG
+- KLT: 1.47 chỉ KLV: 0.47 chỉ KLH: 1.0 chỉ KLĐ: 0.0 chỉ
+- Kí hiệu: GP
+- Hàm lượng: 18k
+- Barcode 128
 
-![example](./docs/template3.PNG)
+![example](./docs/template2.png)
 
 ### Tools
 [diagrameditor](https://www.diagrameditor.com/)
