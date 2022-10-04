@@ -73,6 +73,19 @@ Example
 	-d '{"value":5.2}' \
 	https://vset.vvs.vn/parse/classes/GoldWeight/IXvPHGKTen
 
+**barcode APIs**
+
+GET
+	curl -X GET \
+	  -H "X-Parse-Application-Id: SCWASRTWK1Y9AVMP1KFC" \
+	https://vset.vvs.vn/parse/classes/PrintJob
+
+DELETE
+
+	curl -X DELETE \
+	  -H "X-Parse-Application-Id: SCWASRTWK1Y9AVMP1KFC" \
+	https://vset.vvs.vn/parse/classes/PrintJob/D9UrWx2m0H
+
 ### Tools
 [diagrameditor](https://www.diagrameditor.com/)
 
