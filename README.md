@@ -76,6 +76,7 @@ Example
 **barcode APIs**
 
 GET
+
 	curl -X GET \
 	  -H "X-Parse-Application-Id: SCWASRTWK1Y9AVMP1KFC" \
 	https://vset.vvs.vn/parse/classes/PrintJob
