@@ -19,7 +19,8 @@ class printer():
         
     def generate_img(self,img_name):
         img = Image.new('RGB',(self.IMAGE_WIDTH,self.IMAGE_HEIGHT),color = 'white')
-        print()
+        d = ImageDraw.Draw(img)
+        d.text((10,10),"Xin Chào!",font = self.fnt,fill=(0,0,0))
         img.save(f"{self.barcode_path}/{img_name}.png")
     
     def print_barcode(self,file):

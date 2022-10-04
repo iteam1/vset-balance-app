@@ -139,3 +139,7 @@ DELETE
 [Run a batch file at loading of Windows 8 and 10](https://www.computerhope.com/issues/ch000322.htm)
 
 [Start your mining .BAT file with Windows Startup Automatically](https://www.youtube.com/watch?v=Kz2rUbjTd68)
+
+[Create images with Python PIL](https://code-maven.com/create-images-with-python-pil-pillow)
+
+[How to include barcode value with actual barcode Python `code128` module](https://stackoverflow.com/questions/65471637/how-to-include-barcode-value-with-actual-barcode-python-code128-module) *Really important*
