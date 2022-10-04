@@ -16,6 +16,8 @@ OS: Windows 7,10
 
 ### Guides
 
+- create database `python utils/create_db.py`
+
 - run all things `run.bat` (also work with virtual environment)
 
 - run local-app (independently) `python run.py`
@@ -57,3 +59,5 @@ List all printer:
 [How to print hard copy of C, C++ program's output | C++ program for printer device](https://www.youtube.com/watch?v=GDxLs0CEdAY)
 
 [printing-on-paper-with-python-n79](https://dev.to/pa4kev/printing-on-paper-with-python-n79)
+
+[sqlite-browser](https://sqlitebrowser.org/dl/)
