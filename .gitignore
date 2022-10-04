@@ -10,3 +10,9 @@ __pycache__
 # snippet code
 utils/Print 10
 utils/src
+
+#image
+.*jpeg
+.*jpg
+.*png
+.*PNG
