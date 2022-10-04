@@ -1,3 +1,4 @@
 ECHO MESSAGE INFO - LOCAL APPLICATIONS
-START python server.py
+@REM START python server.py
 START python balance_service.py
+START python printer_service.py
