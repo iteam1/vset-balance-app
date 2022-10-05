@@ -21,13 +21,13 @@ class printer():
         self.shape = [(0,0),(670,0),(670,160),(0,160),(0,0)]
         self.hDC= win32ui.CreateDC()
         self.hDC.CreatePrinterDC(self.printer_name)
-        
+    
     def generate_img(self,img_name,barcode_content="12345678"):
         # INIT PILLOW IMAGE
         img = Image.new('RGB',(self.IMAGE_WIDTH,self.IMAGE_HEIGHT),color = 'white')
         d = ImageDraw.Draw(img)
         #DRAW SHAPE
-        d.line(self.shape,fill = "black",width=5)
+        d.line(self.shape,fill = "black",width=3)
         d.line([(self.IMAGE_WIDTH/2,0),(self.IMAGE_WIDTH/2,self.IMAGE_HEIGHT)],fill = "black",width=3)
         # BARCODE
         barcode_image = code128.image(barcode_content, height=40)
