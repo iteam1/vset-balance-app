@@ -36,13 +36,13 @@ class printer():
         # TEXT BARCODE
         d.text((460,120),barcode_content,font = self.fnt,fill=(0,0,0))
         # TEXT PAGE1
-        d.text((10,10),"XIN CHÀO DÒNG 1!",font = self.fnt,fill=(0,0,0))
-        d.text((10,40),"XIN CHÀO DÒNG 2!",font = self.fnt,fill=(0,0,0))
-        d.text((10,70),"XIN CHÀO DÒNG 3!",font = self.fnt,fill=(0,0,0))
-        d.text((10,100),"XIN CHÀO DÒNG 4!",font = self.fnt,fill=(0,0,0))
+        d.text((10,10),page1,font = self.fnt,fill=(0,0,0))
+        # d.text((10,40),"XIN CHÀO DÒNG 2!",font = self.fnt,fill=(0,0,0))
+        # d.text((10,70),"XIN CHÀO DÒNG 3!",font = self.fnt,fill=(0,0,0))
+        # d.text((10,100),"XIN CHÀO DÒNG 4!",font = self.fnt,fill=(0,0,0))
         # TEXT PAGE2
-        d.text((400,10),"XIN CHÀO DÒNG 1!",font = self.fnt,fill=(0,0,0))
-        d.text((400,40),"XIN CHÀO DÒNG 2!",font = self.fnt,fill=(0,0,0))
+        d.text((400,10),page2['text'],font = self.fnt,fill=(0,0,0))
+        # d.text((400,40),"XIN CHÀO DÒNG 2!",font = self.fnt,fill=(0,0,0))
         # SAVE IMAGE
         img.save(f"{self.barcode_path}/{img_name}.png")
     
