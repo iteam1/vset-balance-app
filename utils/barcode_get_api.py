@@ -10,3 +10,5 @@ headers = {
 with requests.Session() as s:
     res = s.get(base_url,headers=headers)
     print(res.json())
+    with open('./docs/json_api.json','w') as f:
+        json.dump(res.json(),f)
