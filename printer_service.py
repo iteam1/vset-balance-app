@@ -22,7 +22,7 @@ class printer():
         self.hDC= win32ui.CreateDC()
         self.hDC.CreatePrinterDC(self.printer_name)
     
-    def generate_img(self,img_name,barcode_content="12345678"):
+    def generate_img(self,img_name,page1_content="",page2_content="",barcode_content="12345678"):
         # INIT PILLOW IMAGE
         img = Image.new('RGB',(self.IMAGE_WIDTH,self.IMAGE_HEIGHT),color = 'white')
         d = ImageDraw.Draw(img)
@@ -66,12 +66,19 @@ class printer():
             print(e)
 
 # Init
+base_url = 'https://gold-pos.vvs.vn/parse/classes/PrintJob'
+headers = {"X-Parse-Application-Id":"SCWASRTWK1Y9AVMP1KFC",}
 file_path = "./docs/task_printer.json"
 thermal_printer = printer()
 
 # Loop
 
 #Send request and Load json
+with requests.Session() as s:
+    res = s.get(base_url,headers=headers)
+tasks = res.json()
+print(print(len(tasks['results'])))
+
 f = open(file_path) # read text
 tasks_printer = json.load(f) # convert text to json
 #print(tasks_printer)
