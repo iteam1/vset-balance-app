@@ -22,7 +22,7 @@ class printer():
         self.hDC= win32ui.CreateDC()
         self.hDC.CreatePrinterDC(self.printer_name)
     
-    def generate_img(self,img_name,page1_content="",page2_content="",barcode_content="12345678"):
+    def generate_img(self,img_name,page1,page2):
         # INIT PILLOW IMAGE
         img = Image.new('RGB',(self.IMAGE_WIDTH,self.IMAGE_HEIGHT),color = 'white')
         d = ImageDraw.Draw(img)
@@ -30,6 +30,7 @@ class printer():
         d.line(self.shape,fill = "black",width=3)
         d.line([(self.IMAGE_WIDTH/2,0),(self.IMAGE_WIDTH/2,self.IMAGE_HEIGHT)],fill = "black",width=3)
         # BARCODE
+        barcode_content=page2['barcode']
         barcode_image = code128.image(barcode_content, height=40)
         img.paste(barcode_image,(355,80))
         # TEXT BARCODE
@@ -77,7 +78,7 @@ thermal_printer = printer()
 with requests.Session() as s:
     res = s.get(base_url,headers=headers)
 tasks = res.json()
-print(print(len(tasks['results'])))
+print(f"Printing: {len(tasks['results'])} stamps")
 
 f = open(file_path) # read text
 tasks_printer = json.load(f) # convert text to json
@@ -86,8 +87,12 @@ barcode_list = list(tasks_printer.keys())
 #print(barcode_list)
 
 #Generate image
-for i in range(len(barcode_list)):
-    thermal_printer.generate_img(barcode_list[i])
+for i in range(len(tasks['results'])):
+    stamp = tasks['results'][i]
+    objectId = stamp['objectId']
+    page1 = stamp['page1']
+    page2 = stamp['page2']
+    thermal_printer.generate_img(objectId,page1,page2)
 
 # #Print
 # for i in range(len(barcode_list)):
@@ -98,8 +103,10 @@ for i in range(len(barcode_list)):
 # #Delay
 # time.sleep(5)
 
-# # Clear API
-# # Clear all barcode in floder
-# for i in range(len(barcode_list)):
-#     os.remove(f"{thermal_printer.barcode_path}/{barcode_list[i]}.png")
+# Clear API
+# Clear all barcode in floder
+for i in range(len(tasks['results'])):
+    stamp = tasks['results'][i]
+    objectId = stamp['objectId']
+    os.remove(f"{thermal_printer.barcode_path}/{objectId}.png")
     

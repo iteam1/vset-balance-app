@@ -12,7 +12,7 @@ utils/Print 10
 utils/src
 
 #image
-# *.jpeg
-# *.jpg
-# *.png
-# *.PNG
+*.jpeg
+*.jpg
+*.png
+*.PNG
