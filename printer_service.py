@@ -47,24 +47,21 @@ class printer():
         img.save(f"{self.barcode_path}/{img_name}.png")
     
     def print_barcode(self,file):
-        try:
-            bmp = Image.open(file) # open image convert to bitmap
-            self.hDC.StartDoc(file)
-            self.hDC.StartPage()
-            dib = ImageWin.Dib(bmp)
-            scaled_width,scaled_height = [int(self.SCALE_SIZE * i) for i in bmp.size] # resize width to width scale,height to height scale
-            # calculate (top,left,bottom,right)
-            x1 = 0 + self.OFFSET_X_PIXEL
-            y1 = 0 + self.OFFSET_Y_PIXEL
-            x2 = x1 + scaled_width
-            y2 = y1 + scaled_height
-            # Magic command
-            dib.draw(self.hDC.GetHandleOutput(),(x1,y1,x2,y2))
-            self.hDC.EndPage()
-            self.hDC.EndDoc()
-            self.hDC.DeleteDC()
-        except Exception as e:
-            print(e)
+        bmp = Image.open(file) # open image convert to bitmap
+        self.hDC.StartDoc(file)
+        self.hDC.StartPage()
+        dib = ImageWin.Dib(bmp)
+        scaled_width,scaled_height = [int(self.SCALE_SIZE * i) for i in bmp.size] # resize width to width scale,height to height scale
+        # calculate (top,left,bottom,right)
+        x1 = 0 + self.OFFSET_X_PIXEL
+        y1 = 0 + self.OFFSET_Y_PIXEL
+        x2 = x1 + scaled_width
+        y2 = y1 + scaled_height
+        # Magic command
+        dib.draw(self.hDC.GetHandleOutput(),(x1,y1,x2,y2))
+        self.hDC.EndPage()
+        self.hDC.EndDoc()
+        self.hDC.DeleteDC()
 
 # Init
 base_url = 'https://gold-pos.vvs.vn/parse/classes/PrintJob'
@@ -73,40 +70,56 @@ file_path = "./docs/task_printer.json"
 thermal_printer = printer()
 
 # Loop
+while True:
 
-#Send request and Load json
-with requests.Session() as s:
-    res = s.get(base_url,headers=headers)
-tasks = res.json()
-print(f"Printing: {len(tasks['results'])} stamps")
+    #Send request and Load json
+    with requests.Session() as s:
+        res = s.get(base_url,headers=headers)
+    tasks = res.json()
+    print(f"Printing: {len(tasks['results'])} stamps")
+    
+    try:
+        # f = open(file_path) # read text
+        # tasks_printer = json.load(f) # convert text to json
+        # print(tasks_printer)
+        # barcode_list = list(tasks_printer.keys())
+        # print(barcode_list)
 
-f = open(file_path) # read text
-tasks_printer = json.load(f) # convert text to json
-#print(tasks_printer)
-barcode_list = list(tasks_printer.keys())
-#print(barcode_list)
+        #Generate image
+        print(f"Generating: {len(tasks['results'])} stamps")
+        for i in range(len(tasks['results'])):
+            stamp = tasks['results'][i]
+            objectId = stamp['objectId']
+            page1 = stamp['page1']
+            page2 = stamp['page2']
+            thermal_printer.generate_img(objectId,page1,page2)
 
-#Generate image
-for i in range(len(tasks['results'])):
-    stamp = tasks['results'][i]
-    objectId = stamp['objectId']
-    page1 = stamp['page1']
-    page2 = stamp['page2']
-    thermal_printer.generate_img(objectId,page1,page2)
+        # Print byThermal printer
+        for i in range(len(tasks['results'])):
+            stamp = tasks['results'][i]
+            objectId = stamp['objectId']
+            file_name = f"{thermal_printer.barcode_path}/{objectId}.png"
+            print("Printing: ",file_name)
+            try:
+                thermal_printer.print_barcode(file_name)
+            except:
+                print("Can NOT print: ",file_name)
+                pass # go to next item
+            time.sleep(1)
 
-# #Print
-# for i in range(len(barcode_list)):
-#     file = f"{thermal_printer.barcode_path}/{barcode_list[i]}.png"
-#     thermal_printer.print_barcode(file)
-#     time.sleep(0.5)
-
-# #Delay
-# time.sleep(5)
-
-# Clear API
-# Clear all barcode in floder
-# for i in range(len(tasks['results'])):
-#     stamp = tasks['results'][i]
-#     objectId = stamp['objectId']
-#     os.remove(f"{thermal_printer.barcode_path}/{objectId}.png")
+        # Clear API
+        # Clear all barcode in floder
+        print(f"Deleting: {len(tasks['results'])} stamps")
+        for i in range(len(tasks['results'])):
+            stamp = tasks['results'][i]
+            objectId = stamp['objectId']
+            os.remove(f"{thermal_printer.barcode_path}/{objectId}.png")
+            
+        #Delay
+        time.sleep(5)
+        os.system('cls')
+    
+    except Exception as e:
+        print(e)
+        pass
     
