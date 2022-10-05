@@ -17,7 +17,7 @@ class printer():
         self.SCALE_SIZE = 0.5 # scale factor
         self.barcode_path = "./barcode"
         self.printer_name = win32print.GetDefaultPrinter() # get printer default
-        self.fnt = ImageFont.truetype('./segoe-ui/SEGOEUIB.TTF', 15) # create font
+        self.fnt = ImageFont.truetype('./segoe-ui/SEGOEUIB.TTF', 20) # create font
         self.shape = [(0,0),(670,0),(670,160),(0,160),(0,0)]
         self.hDC= win32ui.CreateDC()
         self.hDC.CreatePrinterDC(self.printer_name)
@@ -27,8 +27,8 @@ class printer():
         img = Image.new('RGB',(self.IMAGE_WIDTH,self.IMAGE_HEIGHT),color = 'white')
         d = ImageDraw.Draw(img)
         #DRAW SHAPE
-        d.line(self.shape,fill = "black",width=3)
-        d.line([(self.IMAGE_WIDTH/2,0),(self.IMAGE_WIDTH/2,self.IMAGE_HEIGHT)],fill = "black",width=3)
+        #d.line(self.shape,fill = "black",width=3)
+        #d.line([(self.IMAGE_WIDTH/2,0),(self.IMAGE_WIDTH/2,self.IMAGE_HEIGHT)],fill = "black",width=3)
         # BARCODE
         barcode_content=page2['barcode']
         barcode_image = code128.image(barcode_content, height=40)
@@ -61,7 +61,7 @@ class printer():
         dib.draw(self.hDC.GetHandleOutput(),(x1,y1,x2,y2))
         self.hDC.EndPage()
         self.hDC.EndDoc()
-        self.hDC.DeleteDC()
+        #self.hDC.DeleteDC()
 
 # Init
 base_url = 'https://gold-pos.vvs.vn/parse/classes/PrintJob'
@@ -112,11 +112,16 @@ while True:
             time.sleep(1)
 
         # Clear API
-        with requests.Session() as s:
-            res = s.delete(delete_base_url,headers=delete_headers)
+        for i in range(len(tasks['results'])):
+            stamp = tasks['results'][i]
+            objectId = stamp['objectId']
+            delete_base_url = 'https://gold-pos.vvs.vn/parse/classes/PrintJob/{objectId}'
+            with requests.Session() as s:
+                res = s.delete(delete_base_url,headers=delete_headers)
+            print(f"Deleted : {objectId} on server")
         
         # Clear all barcode in floder
-        print(f"Deleting: {len(tasks['results'])} stamps")
+        print(f"Deleting Image: {len(tasks['results'])} stamps")
         for i in range(len(tasks['results'])):
             stamp = tasks['results'][i]
             objectId = stamp['objectId']
