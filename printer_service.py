@@ -1,7 +1,10 @@
 import win32print 
 import win32ui
 import time
+import requests
 import json
+import code128
+import io
 from PIL import Image,ImageWin,ImageDraw,ImageFont
 
 class printer():
@@ -13,19 +16,22 @@ class printer():
         self.SCALE_SIZE = 0.5 # scale factor
         self.barcode_path = "./barcode"
         self.printer_name = win32print.GetDefaultPrinter() # get printer default
-        self.fnt = ImageFont.truetype('./segoe-ui/SEGOEUI.TTF', 13) # create font
+        self.fnt = ImageFont.truetype('./segoe-ui/SEGOEUI.TTF', 15) # create font
+        self.shape = [(0,0),(670,0),(670,160),(0,160),(0,0)]
         self.hDC= win32ui.CreateDC()
         self.hDC.CreatePrinterDC(self.printer_name)
         
     def generate_img(self,img_name):
         img = Image.new('RGB',(self.IMAGE_WIDTH,self.IMAGE_HEIGHT),color = 'white')
         d = ImageDraw.Draw(img)
+        d.line(self.shape,fill = "black",width=5)
+        d.line([(self.IMAGE_WIDTH/2,0),(self.IMAGE_WIDTH/2,self.IMAGE_HEIGHT)],fill = "black",width=3)
         d.text((10,10),"Xin Chào!",font = self.fnt,fill=(0,0,0))
         img.save(f"{self.barcode_path}/{img_name}.png")
     
     def print_barcode(self,file):
         bmp = Image.open(file) # open image convert to bitmap
-        
+               
         self.hDC.StartDoc("Test img")
         self.hDC.StartPage()
         
