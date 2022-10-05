@@ -12,3 +12,4 @@
 |[script10.py](/snippet/script10.py)|try to print img by `win32ui`|WORKED!|
 |[script11.py](/snippet/script11.py)|try to print img by `win32ui`|WORKED!|
 |[script12.py](/snippet/script12.py)|try to print img by `win32ui`|WORKED!|
+|[script13.py](/snippet/script13.py)|for testing printer service|WORKED!|
