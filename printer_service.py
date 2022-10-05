@@ -16,17 +16,30 @@ class printer():
         self.SCALE_SIZE = 0.5 # scale factor
         self.barcode_path = "./barcode"
         self.printer_name = win32print.GetDefaultPrinter() # get printer default
-        self.fnt = ImageFont.truetype('./segoe-ui/SEGOEUI.TTF', 15) # create font
+        self.fnt = ImageFont.truetype('./segoe-ui/SEGOEUIB.TTF', 15) # create font
         self.shape = [(0,0),(670,0),(670,160),(0,160),(0,0)]
         self.hDC= win32ui.CreateDC()
         self.hDC.CreatePrinterDC(self.printer_name)
         
-    def generate_img(self,img_name):
+    def generate_img(self,img_name,barcode_content="12345678"):
+        # INIT PILLOW IMAGE
         img = Image.new('RGB',(self.IMAGE_WIDTH,self.IMAGE_HEIGHT),color = 'white')
         d = ImageDraw.Draw(img)
+        #DRAW SHAPE
         d.line(self.shape,fill = "black",width=5)
         d.line([(self.IMAGE_WIDTH/2,0),(self.IMAGE_WIDTH/2,self.IMAGE_HEIGHT)],fill = "black",width=3)
-        d.text((10,10),"Xin Chào!",font = self.fnt,fill=(0,0,0))
+        # BARCODE
+        barcode_image = code128.image(barcode_content, height=80)
+        img.paste(barcode_image,(355,80))
+        # TEXT PAGE1
+        d.text((10,10),"XIN CHÀO DÒNG 1!",font = self.fnt,fill=(0,0,0))
+        d.text((10,40),"XIN CHÀO DÒNG 2!",font = self.fnt,fill=(0,0,0))
+        d.text((10,70),"XIN CHÀO DÒNG 3!",font = self.fnt,fill=(0,0,0))
+        d.text((10,100),"XIN CHÀO DÒNG 4!",font = self.fnt,fill=(0,0,0))
+        # TEXT PAGE2
+        d.text((400,10),"XIN CHÀO DÒNG 1!",font = self.fnt,fill=(0,0,0))
+        d.text((400,40),"XIN CHÀO DÒNG 2!",font = self.fnt,fill=(0,0,0))
+        
         img.save(f"{self.barcode_path}/{img_name}.png")
     
     def print_barcode(self,file):
