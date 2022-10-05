@@ -105,8 +105,8 @@ for i in range(len(tasks['results'])):
 
 # Clear API
 # Clear all barcode in floder
-for i in range(len(tasks['results'])):
-    stamp = tasks['results'][i]
-    objectId = stamp['objectId']
-    os.remove(f"{thermal_printer.barcode_path}/{objectId}.png")
+# for i in range(len(tasks['results'])):
+#     stamp = tasks['results'][i]
+#     objectId = stamp['objectId']
+#     os.remove(f"{thermal_printer.barcode_path}/{objectId}.png")
     

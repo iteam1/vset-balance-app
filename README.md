@@ -121,6 +121,8 @@ DELETE
 
 [labelary](http://labelary.com/)
 
+[ZPL Web Service](http://labelary.com/service.html)
+
 [thong-tu-22](https://www.phanmemvang.com.vn/tin-tuc/tu-van/infographic-tem-nhan-nu-trang-voi-thong-tu-22.html)
 
 [ZPL | ZEBRA Programming Language Tutorial | LABELS PRINTING](https://www.youtube.com/watch?v=DBCV2V4LPZ0)
