@@ -66,6 +66,10 @@ class printer():
 # Init
 base_url = 'https://gold-pos.vvs.vn/parse/classes/PrintJob'
 headers = {"X-Parse-Application-Id":"SCWASRTWK1Y9AVMP1KFC",}
+
+delete_base_url = 'https://gold-pos.vvs.vn/parse/classes/PrintJob/D9UrWx2m0H'
+delete_headers = {"X-Parse-Application-Id":"SCWASRTWK1Y9AVMP1KFC"}
+
 file_path = "./docs/task_printer.json"
 thermal_printer = printer()
 
@@ -108,6 +112,9 @@ while True:
             time.sleep(1)
 
         # Clear API
+        with requests.Session() as s:
+            res = s.delete(delete_base_url,headers=delete_headers)
+        
         # Clear all barcode in floder
         print(f"Deleting: {len(tasks['results'])} stamps")
         for i in range(len(tasks['results'])):
