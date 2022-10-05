@@ -33,10 +33,11 @@ class mybalance():
 the_balance = mybalance(conn = conn)
 
 value = 0.0
-base_url = 'https://vset.vvs.vn/parse/classes/GoldWeight/IXvPHGKTen'
+base_url = 'https://gold-pos.vvs.vn/parse/classes/GoldWeight/IXvPHGKTen'
 data = {"value":value}
 headers = {
     'X-Parse-Application-Id':'SCWASRTWK1Y9AVMP1KFC',
+    'Content-Type':'application/json'
 }
 
 def update_api(value):

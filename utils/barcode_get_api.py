@@ -1,7 +1,7 @@
 import requests
 import json
 
-base_url = 'https://vset.vvs.vn/parse/classes/PrintJob'
+base_url = 'https://gold-pos.vvs.vn/parse/classes/PrintJob'
 
 headers = {
     "X-Parse-Application-Id":"SCWASRTWK1Y9AVMP1KFC",

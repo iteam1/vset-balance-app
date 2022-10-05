@@ -1,7 +1,7 @@
 import requests
 import json
 
-base_url = 'https://vset.vvs.vn/parse/classes/GoldWeight/IXvPHGKTen'
+base_url = 'https://gold-pos.vvs.vn/parse/classes/GoldWeight/IXvPHGKTen'
 
 data = {"value":5.2}
 
