@@ -34,6 +34,9 @@ OS: Windows 7,10
 	pip install zpl
 	pip install zebra
 	pip install barcode
+	pip install code128
+	pip install flask
+	pip install flask_sqlalchemy
 
 **Content**
 
